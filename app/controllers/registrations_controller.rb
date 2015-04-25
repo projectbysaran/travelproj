@@ -7,7 +7,7 @@ class RegistrationsController < Devise::RegistrationsController
 
  def create
   puts "user createeeeeeeeeeeeeeeeeee"
-  @role=Role.find_by_name("employee")
+  @role=Role.find_by_name("member")
   @user=@role.users.new(user_params)
   #@user = User.new(params[:user])
   if @user.save
